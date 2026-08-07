@@ -1,5 +1,5 @@
-import { Component, Input, Self } from '@angular/core';
-import { ControlValueAccessor, FormControl, NgControl, ReactiveFormsModule } from '@angular/forms';
+import { Component, forwardRef, Input, Self } from '@angular/core';
+import { ControlValueAccessor, FormControl, NG_VALUE_ACCESSOR, NgControl, ReactiveFormsModule } from '@angular/forms';
 import { MatError, MatFormField, MatLabel } from '@angular/material/form-field';
 import { MatInput } from '@angular/material/input';
 
@@ -13,8 +13,9 @@ import { MatInput } from '@angular/material/input';
     MatLabel
   ],
   templateUrl: './text-input.component.html',
-  styleUrl: './text-input.component.scss',
+  styleUrl: './text-input.component.scss'
 })
+
 export class TextInputComponent implements ControlValueAccessor {
   @Input() label = '';
   @Input() type = 'text';

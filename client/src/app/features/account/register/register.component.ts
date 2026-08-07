@@ -5,7 +5,6 @@ import { MatCard } from '@angular/material/card';
 import { AccountService } from '../../../core/services/account.service';
 import { Router } from '@angular/router';
 import { SnackbarService } from '../../../core/services/snackbar.service';
-import { JsonPipe } from '@angular/common';
 
 @Component({
   selector: 'app-register',
@@ -15,7 +14,7 @@ import { JsonPipe } from '@angular/common';
     MatButton
   ],
   templateUrl: './register.component.html',
-  styleUrl: './register.component.scss',
+  styleUrl: './register.component.scss'
 })
 export class RegisterComponent {
   private fb = inject(FormBuilder);
